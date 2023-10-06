@@ -3,4 +3,6 @@ namespace Dominio.Entities;
         
         public string ? Descripcion { get; set; }
 
+        public ICollection<DetalleMovimiento> ? DetalleMovimientos { get; set; }
+
     }

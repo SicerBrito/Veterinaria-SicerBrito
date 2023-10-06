@@ -6,8 +6,8 @@ namespace Dominio.Entities;
         public int Cantidad { get; set; }
         public int MovimientoMedicamentoId { get; set; }
         public MovimientoMedicamento ? MovimientoMedicamentos { get; set; }
-        public int TipoMovimiento { get; set; }
-        public TipoMovimiento ? TipoMovimientos{ get; set; }
-        public long Precio { get; set; }  
+        public int TipoMovimientoId { get; set; }
+        public TipoMovimiento ? TipoMovimientos { get; set; }
+        public string ? PrecioTotal { get; set; }  
 
     }

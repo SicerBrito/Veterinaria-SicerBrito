@@ -4,8 +4,6 @@ namespace Dominio.Entities;
         public string ? Nombre { get; set; }
         public DateTime ? FechaNacimiento { get; set; }
 
-        public int MascotaId { get; set; }
-        public Mascota ? Mascotas { get; set; }
         public int PropietarioId { get; set; }
         public Propietario ? Propietarios { get; set; }
         public int EspecieId { get; set; }

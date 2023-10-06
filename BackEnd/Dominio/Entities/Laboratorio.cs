@@ -3,8 +3,8 @@ namespace Dominio.Entities;
         
         public string ? Nombre { get; set; }
         public string ? Direccion { get; set; }
-        public long Telefono { get; set; }
+        public string ? Telefono { get; set; }
 
-        public ICollection<Medicamento> ? Laboratorios { get; set; }
+        public ICollection<Medicamento> ? Medicamentos { get; set; }
 
     }
