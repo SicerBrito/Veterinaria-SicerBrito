@@ -1,0 +1,9 @@
+namespace API.Dtos;
+    public class PropietarioDto{
+        public int Id { get; set; }
+        public string ? NombreCompleto { get; set; }
+        public string ? Email { get; set; }
+        public string ? Telefono { get; set; }
+
+        public List<MascotaDto> ? Mascotas { get; set; }   
+    }
