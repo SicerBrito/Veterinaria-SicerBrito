@@ -18,5 +18,16 @@ namespace Aplicacion.Repository;
                                     .Include(p => p.Citas)
                                     .ToListAsync();        
         }
-        
+
+    //!Consulta Nro.1
+    public async Task<IEnumerable<Veterinario?>>? GetVeterinarioCirujanoAsync()
+    {
+
+        var veterinarioVentasParacetamol = await _Context.Veterinarios!
+            .Where(m => m.Especialidad == "Cirujano")
+            .ToListAsync();
+
+        return veterinarioVentasParacetamol!;
+
     }
+}

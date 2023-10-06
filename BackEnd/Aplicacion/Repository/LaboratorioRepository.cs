@@ -17,4 +17,14 @@ namespace Aplicacion.Repository;
                                     .Include(p => p.Medicamentos)
                                     .ToListAsync();        
         }
-    }
+
+        //!Consulta Nro.2
+        public async Task<IEnumerable<Laboratorio?>> MedicamentosGenfar()
+        {
+            var genfar = await _Context.Laboratorios!
+                .Where(m => m.Nombre == "Genfar")
+                .ToListAsync();
+
+                return genfar;
+        }
+}

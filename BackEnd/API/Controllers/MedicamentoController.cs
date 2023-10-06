@@ -93,4 +93,13 @@ namespace API.Controllers;
             return NoContent();
         }
 
+
+        //! Consulta Nro.5
+        [HttpGet("medicamentomayor50000")]
+        public async Task<ActionResult<Veterinario>> mayor5000()
+        {
+            var mayor = await _UnitOfWork.Medicamentos!.medicamentomayor50000()!;
+            return Ok(mayor);
+        }
+
     }

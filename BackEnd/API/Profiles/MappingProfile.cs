@@ -10,13 +10,50 @@ namespace API.Profiles;
             CreateMap<Rol, RolDto>()
                 .ReverseMap();
 
-                
-            //TODO: Ejemplo
-            // CreateMap<NombreDto1, NombreEntidad1>()
-            //     .ReverseMap();
+            CreateMap<Usuario, UsuarioDto>()
+                .ReverseMap();
 
-            // CreateMap<NombreDto2, NombreEntidad2>()
-            //     .ReverseMap();
+            CreateMap<Cita, CitaDto>()
+                .ReverseMap();
+
+            CreateMap<DetalleMovimiento, DetalleMovimientoDto>()
+                .ReverseMap();
+
+            CreateMap<Especie, EspecieDto>()
+                .ReverseMap();
+
+            CreateMap<Laboratorio, LaboratorioDto>()
+                .ReverseMap();
+
+            CreateMap<Mascota, MascotaDto>()
+                .ReverseMap();
+
+            CreateMap<Medicamento, MedicamentoDto>()
+                .ReverseMap();
+
+            CreateMap<MedicamentosProveedores, MedicamentosProveedoresDto>()
+                .ReverseMap();
+
+            CreateMap<MovimientoMedicamento, MovimientoMedicamentoDto>()
+                .ReverseMap();
+
+            CreateMap<Propietario, PropietarioDto>()
+                .ReverseMap();
+
+            CreateMap<Proveedor, ProveedorDto>()
+                .ReverseMap();
+
+            CreateMap<Raza, RazaDto>()
+                .ReverseMap();
+
+            CreateMap<TipoMovimiento, TipoMovimientoDto>()
+                .ReverseMap();
+
+            CreateMap<TratamientoMedico, TratamientoMedicoDto>()
+                .ReverseMap();
+
+            CreateMap<Veterinario, VeterinarioDto>()
+                .ReverseMap();
 
         }
     }

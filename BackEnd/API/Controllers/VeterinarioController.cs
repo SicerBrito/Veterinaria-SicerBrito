@@ -93,4 +93,12 @@ namespace API.Controllers;
             return NoContent();
         }
 
+        //! Consulta Nro.1
+        [HttpGet("especialidadCirujano")]
+        public async Task<ActionResult<Veterinario>> Cirujano()
+        {
+            var Especialidad = await _UnitOfWork.Veterinarios!.GetVeterinarioCirujanoAsync()!;
+            return Ok(Especialidad);
+        }
+
     }

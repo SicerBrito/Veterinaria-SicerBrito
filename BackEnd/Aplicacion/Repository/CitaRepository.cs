@@ -21,4 +21,13 @@ namespace Aplicacion.Repository;
                                     .ToListAsync();        
         }
 
-    }
+    // public async Task<Mascota>? motivo()
+    // {
+    //     var motivo = await _Context.Citas!
+    //         .Where(m => m.Motivo == "Vacunacion")
+    //         .ToListAsync();
+
+    //     return motivo;
+    // }
+
+}

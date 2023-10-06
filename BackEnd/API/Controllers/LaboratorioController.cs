@@ -93,4 +93,13 @@ namespace API.Controllers;
             return NoContent();
         }
 
+
+        //! Consulta Nro.2
+        [HttpGet("laboratorioGenfar")]
+        public async Task<ActionResult<Veterinario>> Genfar()
+        {
+            var genfar = await _UnitOfWork.Laboratorios!.MedicamentosGenfar()!;
+            return Ok(genfar);
+        }
+
     }

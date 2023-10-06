@@ -21,4 +21,15 @@ namespace Aplicacion.Repository;
                                     .Include(p => p.DetalleMovimientos)
                                     .ToListAsync();        
         }
+
+
+    //!Consulta Nro.5
+    public async Task<List<Medicamento>> medicamentomayor50000()
+    {
+        var medicamentos = await _Context.Medicamentos!
+            .Where(m => (Convert.ToDouble(m.PrecioUnidad)) > 50000)
+            .ToListAsync();
+
+        return medicamentos;
     }
+}
