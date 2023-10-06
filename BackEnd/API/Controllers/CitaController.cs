@@ -93,4 +93,13 @@ namespace API.Controllers;
             return NoContent();
         }
 
+
+        //! Consulta Nro.6
+        [HttpGet("vacunacion")]
+        public async Task<ActionResult<Veterinario>> Vacunacion()
+        {
+            var motivo = await _UnitOfWork.Citas!.Motivo()!;
+            return Ok(motivo);
+        }
+
     }
