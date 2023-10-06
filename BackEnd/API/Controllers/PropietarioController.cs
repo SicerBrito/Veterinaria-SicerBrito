@@ -93,4 +93,14 @@ namespace API.Controllers;
             return NoContent();
         }
 
+        //! Consulta Nro. 2
+        [HttpGet("propietario")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<List<Proveedor>>> Propietario()
+        {
+            var propietario = await _UnitOfWork.Propietarios!.Propietario();
+            return Ok(propietario);
+        }
+
     }

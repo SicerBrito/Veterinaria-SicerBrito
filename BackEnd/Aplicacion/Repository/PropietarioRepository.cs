@@ -18,5 +18,24 @@ namespace Aplicacion.Repository;
                                     .Include(p => p.Mascotas)
                                     .ToListAsync();        
         }
-        
+
+
+        //!consulta nro.4
+    public async Task<List<Propietario>> Propietario()
+    {
+        return await _Context.Propietarios!
+            .Include(p => p.Mascotas)
+            .Select(p => new Propietario
+            {
+                NombreCompleto = p.NombreCompleto + " ",
+                Email = p.Email,
+                Telefono = p.Telefono,
+                Mascotas = p.Mascotas!.Select(m => new Mascota
+                {
+                    Nombre = m.Nombre,
+                    FechaNacimiento = m.FechaNacimiento,
+                }).ToList()
+            })
+            .ToListAsync();
     }
+}
