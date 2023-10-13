@@ -28,7 +28,7 @@ namespace API.Controllers;
             return _Mapper.Map<List<MedicamentoDto>>(records);
         }
 
-        [HttpGet]
+        [HttpGet("Paginacion")]
         [MapToApiVersion("1.1")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
